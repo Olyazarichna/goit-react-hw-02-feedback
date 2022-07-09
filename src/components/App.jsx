@@ -11,9 +11,7 @@ export class App extends Component {
   };
 
   onBtnClick = event => {
-    console.log(event.target.textContent.toLowerCase());
-    const value = event.target.textContent.toLowerCase();
-    console.log(this.props);
+    const value = event.target.textContent;
 
     this.setState(prev => {
       return { [value]: prev[value] + 1 };
