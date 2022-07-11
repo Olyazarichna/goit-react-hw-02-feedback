@@ -11,7 +11,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
               type="button"
               onClick={onLeaveFeedback}
             >
-              {option}
+              {toUpperCase(option)}
             </button>
           </li>
         );
@@ -20,6 +20,12 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   );
 };
 
+function toUpperCase(value) {
+  let text = value.split('');
+  let firstLeter = text[0].toUpperCase();
+  text.splice(0, 1, firstLeter).join('');
+  return text;
+}
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {

@@ -11,7 +11,8 @@ export class App extends Component {
   };
 
   onBtnClick = event => {
-    const value = event.target.textContent;
+   let value = event.target.textContent.toLowerCase();
+   
 
     this.setState(prev => {
       return { [value]: prev[value] + 1 };
